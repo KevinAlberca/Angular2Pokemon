@@ -5,8 +5,7 @@ import 'rxjs/Rx';
 
 @Component({
     selector: 'pokemon-list',
-    templateUrl: './pokemon_list.component.html',
-    styleUrls: ['./pokemon_list.component.css']
+    templateUrl: './list.component.html',
 })
 
 export class PokemonListComponent {
