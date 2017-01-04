@@ -8,16 +8,19 @@ import { AppComponent } from './app.component';
 // Personal import Here
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from '@angular/material';
-import { PokemonListComponent } from './Pokemon/pokemon_list.component';
+import { PokemonListComponent } from './Pokemon/List/list.component';
+import { PokemonDetailsComponent } from './Pokemon/Details/details.component';
 
 const appRoutes: Routes = [
     { path: 'pokemon', component: PokemonListComponent },
+    { path: 'pokemon/:name:', component: PokemonDetailsComponent }
 ];
 
 @NgModule({
     declarations: [
         AppComponent, 
-        PokemonListComponent
+        PokemonListComponent,
+        PokemonDetailsComponent
     ],
     imports: [
         BrowserModule,
