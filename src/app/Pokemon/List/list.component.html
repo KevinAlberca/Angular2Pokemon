@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+
+<div *ngFor="let pokemon of pokemons">
+	<h1>{{ pokemon.name }}</h1>
+	<p>{{ pokemon.apiUrl }}</p>
+	<a href="/pokemon/{{ pokemon.name }}">View</a>
+</div>
