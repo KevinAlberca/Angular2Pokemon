@@ -1,12 +1,17 @@
 export class Pokemon {
 	id: number;
 	name: string;
-	apiUrl: string;
+	abilities: Array<any>;
+	imageUrl: string;
 
-	constructor(id, name, link) {
+	constructor(id,
+	            name,
+	            abilities,
+	            imageUrl) {
 		this.id = id;
 		this.name = name;
-		this.apiUrl = link;
-	}
+		this.abilities = abilities;
+		this.imageUrl = imageUrl;
 
+	}
 }
