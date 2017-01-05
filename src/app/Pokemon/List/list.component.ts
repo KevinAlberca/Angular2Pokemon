@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from "@angular/http";
-import { Pokemon } from '../Pokemon';
+import { PokemonList } from '../List';
 import 'rxjs/Rx';
 
 @Component({
@@ -12,7 +12,7 @@ export class PokemonListComponent {
     title = 'Which pokemon ?';
     private apiUrl: string = "https://pokeapi.co/api/v2/";
 
-    pokemons: Array<Pokemon>;
+    pokemons: Array<PokemonList>;
 
     constructor(private http: Http) {
         /*
@@ -27,10 +27,10 @@ export class PokemonListComponent {
                 return response.json().results;
             })
             .map((pokemons: Array<any>) => {
-                let result: Array<Pokemon> = []; // Define an empty array. It will be append with the fetched data
+                let result: Array<PokemonList> = []; // Define an empty array. It will be append with the fetched data
                 if (pokemons) {
                     pokemons.forEach( (poke) => { // For each fetched pokemons, create new pokemon object
-                        result.push(new Pokemon(poke.id, poke.name, poke.url)); // Push
+                        result.push(new PokemonList(poke.id, poke.name, poke.url)); // Push
                     });
                     return result;
                 }
