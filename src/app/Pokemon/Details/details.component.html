@@ -1,1 +1,9 @@
-Hello Pokemon Details !
+<h1>Hello {{ pokemon_watched }} !</h1>
+
+<div *ngIf="pokemon != null">
+	<img src="{{ pokemon.imageUrl }}" alt="Picture of {{ pokemon_watched }}">
+	<ul *ngFor="let poke_type of pokemon.types">
+		{{ poke_type.type.name }}
+	</ul>
+
+</div>
