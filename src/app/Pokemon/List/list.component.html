@@ -1,6 +1,18 @@
-<h1>{{ title }}</h1>
+<div class="container">
+	<div class="row">
+		<h1 class="text-center">{{ title }}</h1>
 
-<div *ngFor="let pokemon of pokemons">
-	<h1>{{ pokemon.name }}</h1>
-	<a href="/pokemon/{{ pokemon.name }}">View</a>
+		<div *ngFor="let pokemon of pokemons">
+			<md-card class="col-xs-12 col-sm-4 pokemon-card">
+				<!-- <img md-card-image src="assets/img/examples/shiba2.jpg"> -->
+				<md-card-content>
+					<h2>{{ pokemon.name }}</h2>
+				</md-card-content>
+				<md-card-actions>
+					<button md-button>Add</button>
+					<a href="/pokemon/{{ pokemon.name }}" md-button>View</a>
+				</md-card-actions>
+			</md-card>
+		</div>
+	</div>
 </div>
